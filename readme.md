@@ -33,14 +33,14 @@ jovyan@8b38641121bb:~$
 
 ブラウザで`localhost:8888`にアクセスし、上記のtoken文字列をコピペするとjupyterにログインできる。
 
+コンテナ作成時にホストの`docker-jupyter/work`ディレクトリがコンテナの`/home/jovyan/work`にマウントされている。  
+jupyter上で作成したnotebookはここに保存されるし、データのアップロードもここからできるので便利( ´∀｀)bｸﾞｯ!
+
 停止しているコンテナを起動したい場合。
 
 ```bash
 bash start.sh
 ```
-
-起動時にホストの`docker-jupyter/work`ディレクトリがコンテナの`/home/jovyan/work`にマウントされている。  
-jupyter上で作成したnotebookはここに保存されるし、データのアップロードもここからできるので便利( ´∀｀)bｸﾞｯ!
 
 ## reference
 
