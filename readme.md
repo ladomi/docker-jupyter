@@ -65,9 +65,10 @@ bash start.sh
 * 回帰もできる。
 * https://dev.classmethod.jp/machine-learning/2017ad_20171211_dt-2/
 
-## randam forest
+## random forest
 * データセットからランダムサンプリングしてサブセットを複数つくり、  
-  使うパラメータもランダムで選び、それぞれに対して決定木を作って線形結合する。
+  使うパラメータもランダムで選び、それぞれのサブセットに対して決定木を作って線形結合する。
+* 決定木の作成を並列でできるから早い。
 * https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%B3%E3%83%80%E3%83%A0%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%83%88
 
 ## gradient boosting
@@ -79,3 +80,10 @@ bash start.sh
 * 決定木を深さ優先で作るか幅優先で作るかの違いらしい。
 * https://qiita.com/TomokIshii/items/3729c1b9c658cc48b5cb
 
+# 疑問
+
+* kernelを読もう
+* 前処理は全部pythonでやるべきなのか  
+  データを一度dbにいれてsqlで加工してからの方がやりやすい？
+* scalaとsparkの使い方
+* deep learningしたい
