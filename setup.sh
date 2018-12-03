@@ -16,7 +16,8 @@ docker rm jupyter
 docker run -d -v $(pwd)/work:/home/jovyan/work --name jupyter -p 8888:8888 jupyter/all-spark-notebook
 
 # 必要に応じてライブラリを追加
-# docker exec jupyter /opt/conda/bin/pip install tensorflow
+docker exec jupyter /opt/conda/bin/pip install tensorflow
+docker exec jupyter /opt/conda/bin/pip install keras
 
 # ここで待たないとjupyter notebook listがうまくいかない
 sleep 3
@@ -25,4 +26,4 @@ sleep 3
 docker exec jupyter /opt/conda/bin/jupyter notebook list
 
 # コンテナに入る
-docker exec -it jupyter /bin/bash
+# docker exec -it jupyter /bin/bash
