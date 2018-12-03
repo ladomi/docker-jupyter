@@ -7,6 +7,6 @@ cd ${script_dir}
 ################################################################################
 
 docker start jupyter
-sleep 3
-docker exec jupyter /opt/conda/bin/jupyter notebook list
-docker exec -it jupyter /bin/bash
+# sleep 3
+# docker exec jupyter /opt/conda/bin/jupyter notebook list
+# docker exec -it jupyter /bin/bash
