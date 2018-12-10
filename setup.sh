@@ -22,7 +22,7 @@ docker exec jupyter /opt/conda/bin/pip install keras
 # ここで待たないとjupyter notebook listがうまくいかない
 # sleep 3
 
-# # tokenを出す
+# tokenを出す
 # docker exec jupyter /opt/conda/bin/jupyter notebook list
 
 # アクセス制限をとっぱらう
@@ -36,6 +36,8 @@ c.NotebookApp.token = ''
 EOS
 docker cp ./jupyter_notebook_config.py jupyter:/home/jovyan/.jupyter/jupyter_notebook_config.py
 rm -f ./jupyter_notebook_config.py
+
+# 設定を読み込むためにコンテナ再起動
 docker restart jupyter
 
 # コンテナに入る
